@@ -12,8 +12,6 @@
 #pragma link C++ class testStruct_t+;
 #pragma link C++ class std::vector<someEnum>++;
 #pragma link C++ class std::vector<anotherEnum>++;
-#pragma link C++ class testStruct_t::someEnum+;
-#pragma link C++ class testStruct_t::anotherEnum+;
 
 // #pragma link C++ class ROOT::Internal::TTreeReaderArray<someEnum>++;
 // #pragma link C++ class ROOT::Internal::TTreeReaderArray<anotherEnum>++;

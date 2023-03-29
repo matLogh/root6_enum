@@ -10,9 +10,10 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_compile_options(-g -O0)
 
-ROOT_GENERATE_DICTIONARY(G__enum_definition enum.hh LINKDEF LinkDef.h)
-add_library(enum_definition SHARED G__enum_definition.cxx)
-target_link_libraries(enum_definition ${ROOT_LIBRARIES})
+
+# Compile data structures, definition of "enum_definition" library
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/data_structures/)
+include_directories(${enumtest_SOURCE_DIR}/data_structures)
 
 ROOT_GENERATE_DICTIONARY(G__selector enum_tree.h enum_tree.C LINKDEF SelectorLinkDef.h)
 add_library(selector SHARED G__selector.cxx)
