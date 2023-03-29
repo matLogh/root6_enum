@@ -5,10 +5,10 @@
 
 enum someEnum : unsigned int
 {
-    kS1,
-    kS2,
-    kS3,
-    kS4
+    kS1 = (1u << 0),
+    kS2 = (1u << 1),
+    kS3 = (1u << 2),
+    kS4 = (1u << 3)
 };
 
 enum anotherEnum : unsigned int
